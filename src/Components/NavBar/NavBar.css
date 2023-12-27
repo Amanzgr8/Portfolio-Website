@@ -1,0 +1,19 @@
+#NavBar{
+    display: flex;
+}
+#NavHead{}
+
+#Option{
+    margin-left: auto;
+}
+
+button{
+    background-color: transparent;
+    color:black;
+    border-radius: 5PX;
+    margin: 10px;
+    border-color: transparent;    
+    &:hover{
+        background-color: gray;
+    } 
+}

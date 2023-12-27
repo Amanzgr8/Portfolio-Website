@@ -1,0 +1,27 @@
+#WelBar{
+    display: block;
+    margin: 20px;
+}
+#WelOne{
+    background-color: transparent;
+    min-height: 20vw;
+}
+
+#WelText{
+    font-size: 10vw;
+    
+}
+#WelTwo{
+    display: flex;
+    margin: 10vw;
+}
+#WelNote{
+    display: block;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+#pic{
+    height: auto;
+    width: 50%;
+}
