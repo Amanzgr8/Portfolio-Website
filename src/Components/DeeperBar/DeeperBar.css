@@ -1,0 +1,8 @@
+#Header{
+    display: block;   
+}
+#Options{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 20%;
+}

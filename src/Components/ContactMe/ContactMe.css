@@ -1,0 +1,30 @@
+#Header{
+    display: block;   
+}
+#TngsToFill{
+    
+    margin-inline: 20%;
+}
+#Name{
+    display: flex;
+    justify-content: center;
+}
+#Email{
+    display: flex;
+    justify-content: center;
+}
+#Subject{
+    display: flex;
+    justify-content: center;
+}
+#Message{
+    display: flex;
+    justify-content: center;
+}
+input[type="text"]{
+    border: transparent;
+    background-color: grey;
+    max-height: 100px;
+    border-radius: 10px;
+    align-self: center;
+}

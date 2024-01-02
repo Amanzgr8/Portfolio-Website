@@ -1,0 +1,9 @@
+#footer{
+    display: flex;
+    margin: 2vw;
+    
+}
+#logos{
+    margin-left: auto;
+    align-self: center;
+}

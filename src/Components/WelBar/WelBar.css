@@ -9,7 +9,8 @@
 
 #WelText{
     font-size: 10vw;
-    
+}@keyframes cursor{
+    50%{border-color: transparent;}
 }
 #WelTwo{
     display: flex;

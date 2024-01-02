@@ -1,12 +1,13 @@
 import React from "react";
 import "./WelBar.css";
 import MyPic from '/Users/amanuels/Desktop/personal-website/src/pics/homepage.jpg'
+import TypeWriter from "../TypeWriter";
 
 function WelcomeBar(){
     return(
         <div id="WelBar">
             <div id="WelOne">
-                <b id="WelText">WELCOME TO MY PORTFOLIO</b>
+                <b id="WelText"> <TypeWriter text={"Welcome To My Portfolio"}/> </b>
             </div>
             <div id="WelTwo">
                 <div id="WelNote">
