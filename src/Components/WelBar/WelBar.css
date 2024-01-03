@@ -1,28 +1,33 @@
 #WelBar{
     display: block;
-    margin: 20px;
+    margin: 15px;
 }
 #WelOne{
     background-color: transparent;
-    min-height: 20vw;
+    min-height: 15vw;
+    margin-bottom: 25vw;
 }
 
 #WelText{
-    font-size: 10vw;
+    font-size: 12vw;
 }@keyframes cursor{
     50%{border-color: transparent;}
 }
 #WelTwo{
     display: flex;
     margin: 10vw;
+    
 }
 #WelNote{
     display: block;
-    max-width: 50%;
+    max-width: 30%;
+    min-width: 30%;
     justify-content: center;
     align-items: center;
 }
 #pic{
     height: auto;
-    width: 50%;
+    width: 70%;
+    opacity: 80%;
+    align-self: center;
 }
