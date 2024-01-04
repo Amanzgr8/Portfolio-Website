@@ -6,3 +6,8 @@
     justify-content: space-between;
     margin-inline: 20%;
 }
+#AboutMe, #Projects, #Honors{
+    border-radius: 10%;
+    max-width: 30%;
+    
+}

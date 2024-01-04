@@ -1,6 +1,7 @@
 import React from "react";
 import './Footer.css'
 import Linkeden from '/Users/amanuels/Desktop/personal-website/src/pics/linkedin.png'
+import Instagram from '/Users/amanuels/Desktop/personal-website/src/pics/Instagram.png'
 
  
 // Component that displys the other pages as options to chose from
@@ -11,6 +12,9 @@ function Footer(){
             <div id="logos">
                 <a href="https://www.linkedin.com/in/amanuel-kebede-80b91a231/">
                     <img src={Linkeden} alt="Linkedin Logo" height={40} width={40}/>
+                </a>
+                <a>
+                    <img src={Instagram} alt="Instagram Logo" height={40} width={40}/>
                 </a>
             </div>
         </div>

@@ -1,9 +1,12 @@
 #footer{
     display: flex;
     margin: 2vw;
+    margin-top: 5%;
+    font-size: x-small;
     
 }
 #logos{
     margin-left: auto;
     align-self: center;
+    justify-content: space-between;
 }

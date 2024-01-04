@@ -1,30 +1,54 @@
 #Header{
-    display: block;   
+    display: block;
+    margin-top: 10%;   
 }
 #TngsToFill{
     
-    margin-inline: 20%;
+    margin-inline: 30%;
 }
 #Name{
-    display: flex;
-    justify-content: center;
+    
+    display: block;
+    text-align: left;
+    
 }
 #Email{
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: left;
+   
 }
 #Subject{
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: left;
+    
 }
 #Message{
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: left;
+    
 }
 input[type="text"]{
-    border: transparent;
-    background-color: grey;
+    
+    
+    border-color: transparent;
+    color: antiquewhite;
+    font: 1em sans-serif;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+    background-color: transparent;
     max-height: 100px;
-    border-radius: 10px;
-    align-self: center;
+    width: 100%;
+    /* border-radius: 5px; */
+    /* align-self: center; */
+}
+textarea[name="paragraphInput"] {
+    width: 100%;
+    border-bottom-color: white;
+    background-color: transparent;
+    color: antiquewhite;
+    
+}
+h2{
+    margin-bottom: 0%;
+    
 }
