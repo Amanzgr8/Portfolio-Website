@@ -43,6 +43,7 @@ input[type="text"]{
 }
 textarea[name="paragraphInput"] {
     width: 100%;
+    max-width: 100%;
     border-bottom-color: white;
     background-color: transparent;
     color: antiquewhite;
