@@ -4,8 +4,10 @@ Welcome. This is a repository for  a personal portfolio webiste. The purpose of 
 
 ## Prerequisites
 
-Before touching this repository, there are several steps you should follow to ensure that your development environment is properly set up. Here's a checklist: * Install and configure Git(follow the steps on https://git-scm.com/)
-             * Install Node.js and npm(npm is included with Node.js which you can download from https://nodejs.org/en)
+Before touching this repository, there are several steps you should follow to ensure that your development environment is properly set up. Here's a checklist: 
+
+* Install and configure Git(follow the steps on https://git-scm.com/)
+* Install Node.js and npm(npm is included with Node.js which you can download from https://nodejs.org/en)
 
 ## Getting Started
 
