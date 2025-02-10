@@ -6,6 +6,7 @@ import DeeperBar from './Components/DeeperBar/DeeperBar';
 import ContactMe from './Components/ContactMe/ContactMe';
 import Footer from './Components/Footer/Footer';
 
+// gets rendered by index.js
 function App() {
   return (
     <div className="App"> 

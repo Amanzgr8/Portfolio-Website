@@ -21,6 +21,7 @@ const ScrollText = ({text, scrollLength, speed})=>{
     } ,[])
 
     return(
+
         <div>
             {scrolling && <TypeWriter typingSpeed={speed} text={text}/>}
         </div>

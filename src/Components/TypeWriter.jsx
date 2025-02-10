@@ -1,31 +1,40 @@
 import React, { useEffect, useRef, useState } from "react";
 import './TypeWriter.css';
 
-// a function for the type writing and cursor effect
-const TypeWriter = ({text, typingSpeed = 300}) => {
-    const [currentText, setCurrentText]= useState("");
+const TypeWriter = ({ text, typingSpeed = 300 }) => {
+    const [visibleText, setVisibleText] = useState(
+        text.split("").map(() => "hidden") // Initialize all characters as "hidden"
+    );
     const [isCursorVisible, setIsCursorVisible] = useState(true);
-
-    let index = useRef(-1);
-
-    // a hook, that calles a funcyion that types words based on a time interval(typingSpeed)
-    useEffect(()=> {
-        setTimeout(() =>{
-            let nxt = text.charAt(index.current);
-            setCurrentText((value)=> value + nxt);
-            console.log(currentText)
-            index.current += 1;
-            
-        }, typingSpeed)
-
-
-        // used to make the cursor invisible once typing is done
-        if(text.length <= index.current){setIsCursorVisible(false)}
-   
-        
-    },[currentText, text])
     
+    let index = useRef(0);
+    let timeout = useRef(null);
 
-    return<p>{currentText}<span className={isCursorVisible ? 'cursor' : 'inv-cursor'}>|</span></p> 
+    useEffect(() => {
+        if (index.current < text.length) {
+            timeout.current = setTimeout(() => {
+                setVisibleText((prev) => {
+                    let newText = [...prev];
+                    newText[index.current] = "visible"; // Make current character visible
+                    return newText;
+                });
+                index.current += 1;
+            }, typingSpeed);
+        } else {
+            setIsCursorVisible(false);
+        }
 
-};export default TypeWriter;
+        return () => clearTimeout(timeout.current);
+    }, [visibleText]); 
+
+    return (
+        <p>
+            {text.split("").map((char, i) => (
+                <span key={i} className={visibleText[i]}>{char}</span>
+            ))}
+            <span className={isCursorVisible ? 'cursor' : 'inv-cursor'}>|</span>
+        </p>
+    );
+};
+
+export default TypeWriter;
