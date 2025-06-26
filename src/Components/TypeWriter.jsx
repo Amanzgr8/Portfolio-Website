@@ -5,7 +5,7 @@ const TypeWriter = ({ text, typingSpeed = 300 }) => {
     const [visibleText, setVisibleText] = useState(
         text.split("").map(() => "hidden") // Initialize all characters as "hidden"
     );
-    const [isCursorVisible, setIsCursorVisible] = useState(true);
+    // const [isCursorVisible, setIsCursorVisible] = useState(false);
     
     let index = useRef(0);
     let timeout = useRef(null);
@@ -20,9 +20,11 @@ const TypeWriter = ({ text, typingSpeed = 300 }) => {
                 });
                 index.current += 1;
             }, typingSpeed);
-        } else {
-            setIsCursorVisible(false);
-        }
+        } 
+        
+        // else {
+        //     setIsCursorVisible(false);
+        // }
 
         return () => clearTimeout(timeout.current);
     }, [visibleText]); 
@@ -32,7 +34,7 @@ const TypeWriter = ({ text, typingSpeed = 300 }) => {
             {text.split("").map((char, i) => (
                 <span key={i} className={visibleText[i]}>{char}</span>
             ))}
-            <span className={isCursorVisible ? 'cursor' : 'inv-cursor'}>|</span>
+            {/* <span className={isCursorVisible ? 'cursor' : 'inv-cursor'}>|</span> */}
         </p>
     );
 };

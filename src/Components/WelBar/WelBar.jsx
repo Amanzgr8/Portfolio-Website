@@ -12,7 +12,7 @@ function WelcomeBar(){
             </div>
             <div id="WelTwo">
                 <div id="WelNote">
-                   <b> <ScrollText text = {"Intro"} scrollLength = {300}/></b>
+                   <b> <ScrollText text = {'Intro'} scrollLength = {300}/></b>
 
                     <ScrollText 
                         speed={20} 
