@@ -7,21 +7,28 @@ const TypeWriter = ({ text, typingSpeed = 300 }) => {
     );
     // const [isCursorVisible, setIsCursorVisible] = useState(false);
     
-    let index = useRef(0);
+    let index = useRef(-2); // Use a ref to keep track of the current index
     let timeout = useRef(null);
 
     useEffect(() => {
+        console.log(index.current);
         if (index.current < text.length) {
+            console.log("hello");
+            console.log(timeout.current);
             timeout.current = setTimeout(() => {
+                console.log("hello1");
                 setVisibleText((prev) => {
                     let newText = [...prev];
                     newText[index.current] = "visible"; // Make current character visible
+                    console.log("hello2");
                     return newText;
                 });
-                index.current += 1;
+                //index.current += 1;
+                console.log("adding");
             }, typingSpeed);
         } 
-        
+       index.current += 1;
+       console.log("adding");
         // else {
         //     setIsCursorVisible(false);
         // }
@@ -40,3 +47,4 @@ const TypeWriter = ({ text, typingSpeed = 300 }) => {
 };
 
 export default TypeWriter;
+ 

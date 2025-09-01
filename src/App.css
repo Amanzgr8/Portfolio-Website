@@ -1,6 +1,6 @@
 :root{
   font-family: 'Courier New', monospace;
-  color: #FFFDD0;
+  color: #1bc4ea;
   background-color: black;
 }
 .App {
@@ -30,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #69dbfa;
 }
 
 @keyframes App-logo-spin {

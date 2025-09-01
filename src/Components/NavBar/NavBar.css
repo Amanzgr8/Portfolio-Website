@@ -10,12 +10,13 @@
 
 button{
     background-color: transparent;
-    color: #FFFDD0;
+    color: #69dbfa;;
     font-family: 'Courier New', monospace;
     border-radius: 5PX;
     margin: 10px;
     border-color: transparent;    
     &:hover{
-        background-color: gray;
+        background-color: #05363c;
+        background-: 50% ;
     } 
 }

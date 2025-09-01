@@ -8,11 +8,11 @@ function WelcomeBar(){
     return(
         <div id="WelBar">
             <div id="WelOne">
-                <b id="WelText"> <TypeWriter text={"Welcome To Amanuel's Portfolio"}/> </b>
+                <b id="WelText"> <TypeWriter typingSpeed = {100} text={"Welcome"}/> </b>
             </div>
             <div id="WelTwo">
                 <div id="WelNote">
-                   <b> <ScrollText text = {'Intro'} scrollLength = {300}/></b>
+                   <b> <ScrollText text = {'Intro'} speed={20} scrollLength = {300}/></b>
 
                     <ScrollText 
                         speed={20} 
