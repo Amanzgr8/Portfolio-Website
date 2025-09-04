@@ -4,27 +4,22 @@ import './ContactMe.css'
 //a component for the contact me section of the home page
 function ContactMe(){
 
-    <script>
-        document.querySelector("#contact").addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const f = e.target;
-            const data = {
-                name: f.name.value,
-                email: f.email.value,
-                message: f.message.value
-            };
+    // stores input values in a state variable
+    const [form, setForm] = React.useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+    });
+    // updates state variables on input change
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm((f) => ({ ...f, [name]: value }));
+    };
 
-        const res = await fetch("YOUR_WEB_APP_URL", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json" }
-        });
+    const resetForm = () =>
+        setForm({ name: "", email: "", subject: "", message: "" });
 
-        alert(res.ok ? "Message sent! 🎉" : "Something went wrong 😕");
-        
-        });
-    </script>
-    
     return(
         <div id="ContactMe">
             <h1 id="Header">Contact Me</h1>
