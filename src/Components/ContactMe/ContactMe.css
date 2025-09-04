@@ -41,7 +41,7 @@ input[type="text"]{
     /* border-radius: 5px; */
     /* align-self: center; */
 }
-textarea[name="paragraphInput"] {
+textarea[name="messageInput"] {
     width: 100%;
     max-width: 100%;
     border-bottom-color: white;
@@ -52,4 +52,16 @@ textarea[name="paragraphInput"] {
 h2{
     margin-bottom: 0%;
     
+}
+#SubmitButton{
+    margin-top: 1%;
+    color: #69dbfa;
+    border-color: transparent;    
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    &:hover{
+        background-color: #05363c;
+        background-: 50% ;
+    } 
 }

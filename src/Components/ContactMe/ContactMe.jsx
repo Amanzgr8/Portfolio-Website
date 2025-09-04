@@ -3,6 +3,28 @@ import './ContactMe.css'
  
 //a component for the contact me section of the home page
 function ContactMe(){
+
+    <script>
+        document.querySelector("#contact").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const f = e.target;
+            const data = {
+                name: f.name.value,
+                email: f.email.value,
+                message: f.message.value
+            };
+
+        const res = await fetch("YOUR_WEB_APP_URL", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" }
+        });
+
+        alert(res.ok ? "Message sent! 🎉" : "Something went wrong 😕");
+        
+        });
+    </script>
+    
     return(
         <div id="ContactMe">
             <h1 id="Header">Contact Me</h1>
@@ -22,12 +44,12 @@ function ContactMe(){
                 <div id="Message">
                     <h2>Message: </h2>
                     {/* <input placeholder="Type Message Here" id="MessageBox"  type="text"/> */}
-                    <textarea  name="paragraphInput" rows="4" cols="100">
-                        Enter your paragraph here...
+                    <textarea  name="messageInput" rows="4" cols="100">
+                        Enter your message here...
                     </textarea>
-
                 </div>
             </div>
+            <button id="SubmitButton" type="button">Submit</button>
         </div> 
     )
 }export default ContactMe
