@@ -26,7 +26,7 @@ function ContactMe(){
             <div id="TngsToFill">
                 <div id="Name">
                     <h2 >Name: </h2>
-                    <input placeholder="Type Your Name" type="text" />
+                    <input placeholder="Type Your Name" type="text" name="name" value={form.name} onChange={handleChange} />
                 </div>
                 <div id="Email">
                     <h2>Email: </h2>
