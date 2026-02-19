@@ -1,67 +1,84 @@
-#Header{
+.section-header{
     display: block;
     margin-top: 10%;   
 }
 #TngsToFill{
-    
+    display: grid;
+    gap: 1rem;
     margin-inline: 30%;
 }
 #Name{
-    
     display: block;
     text-align: left;
-    
 }
 #Email{
     display: block;
     text-align: left;
-   
 }
 #Subject{
     display: block;
     text-align: left;
-    
 }
 #Message{
     display: block;
     text-align: left;
-    
 }
-input[type="text"]{
-    
-    
-    border-color: transparent;
+#TngsToFill input,
+#TngsToFill textarea{
+    border: 1px solid rgba(105, 219, 250, 0.35);
+    border-radius: 10px;
     color: antiquewhite;
-    font: 1em sans-serif;
-    border-bottom-width: 1px;
-    border-bottom-color: white;
-    background-color: transparent;
-    max-height: 100px;
+    font: 1em 'Courier New', monospace;
+    background-color: rgba(5, 54, 60, 0.35);
     width: 100%;
-    /* border-radius: 5px; */
-    /* align-self: center; */
+    box-sizing: border-box;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
-textarea[name="messageInput"] {
-    width: 100%;
-    max-width: 100%;
-    border-bottom-color: white;
-    background-color: transparent;
-    color: antiquewhite;
-    
+
+#TngsToFill input::placeholder,
+#TngsToFill textarea::placeholder {
+    color: rgba(250, 235, 215, 0.65);
 }
+
+#TngsToFill input:focus,
+#TngsToFill textarea:focus {
+    border-color: #69dbfa;
+    box-shadow: 0 0 0 3px rgba(105, 219, 250, 0.2);
+    background-color: rgba(5, 54, 60, 0.55);
+}
+
+#TngsToFill textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
 h2{
-    margin-bottom: 0%;
-    
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
+
 #SubmitButton{
-    margin-top: 1%;
+    margin-top: 0.5rem;
     color: #69dbfa;
-    border-color: transparent;    
+    border: 1px solid rgba(105, 219, 250, 0.45);
+    border-radius: 10px;
+    background-color: rgba(5, 54, 60, 0.35);
     padding: 10px 20px;
     font-size: 1em;
+    font-family: 'Courier New', monospace;
     cursor: pointer;
-    &:hover{
-        background-color: #05363c;
-        background-: 50% ;
-    } 
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#SubmitButton:hover{
+    background-color: #05363c;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    #TngsToFill {
+        margin-inline: 10%;
+    }
 }

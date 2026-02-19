@@ -7,6 +7,25 @@
   text-align: center;
 }
 
+.phase-section {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  will-change: opacity, transform;
+  transition: opacity 260ms ease-out, transform 260ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phase-section {
+    transition: none;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,47 +1,51 @@
 import React, { useEffect, useRef, useState } from "react";
 import './TypeWriter.css';
 
-const TypeWriter = ({ text, typingSpeed = 300 }) => {
+const TypeWriter = ({ text, typingSpeed = 300, onComplete }) => {
     const [visibleText, setVisibleText] = useState(
         text.split("").map(() => "hidden") // Initialize all characters as "hidden"
     );
-    // const [isCursorVisible, setIsCursorVisible] = useState(false);
     
-    let index = useRef(-2); // Use a ref to keep track of the current index
-    let timeout = useRef(null);
+    const index = useRef(0);
+    const timeout = useRef(null);
+    const hasCompleted = useRef(false);
 
     useEffect(() => {
-        console.log(index.current);
-        if (index.current < text.length) {
-            console.log("hello");
-            console.log(timeout.current);
-            timeout.current = setTimeout(() => {
-                console.log("hello1");
-                setVisibleText((prev) => {
-                    let newText = [...prev];
-                    newText[index.current] = "visible"; // Make current character visible
-                    console.log("hello2");
-                    return newText;
-                });
-                //index.current += 1;
-                console.log("adding");
-            }, typingSpeed);
-        } 
-       index.current += 1;
-       console.log("adding");
-        // else {
-        //     setIsCursorVisible(false);
-        // }
+        setVisibleText(text.split("").map(() => "hidden"));
+        index.current = 0;
+        hasCompleted.current = false;
+
+        const revealNextCharacter = () => {
+            if (index.current >= text.length) {
+                if (!hasCompleted.current && onComplete) {
+                    hasCompleted.current = true;
+                    onComplete();
+                }
+                return;
+            }
+
+            const currentIndex = index.current;
+
+            setVisibleText((prev) => {
+                const next = [...prev];
+                next[currentIndex] = "visible";
+                return next;
+            });
+
+            index.current += 1;
+            timeout.current = setTimeout(revealNextCharacter, typingSpeed);
+        };
+
+        timeout.current = setTimeout(revealNextCharacter, typingSpeed);
 
         return () => clearTimeout(timeout.current);
-    }, [visibleText]); 
+    }, [text, typingSpeed, onComplete]);
 
     return (
         <p>
             {text.split("").map((char, i) => (
                 <span key={i} className={visibleText[i]}>{char}</span>
             ))}
-            {/* <span className={isCursorVisible ? 'cursor' : 'inv-cursor'}>|</span> */}
         </p>
     );
 };

@@ -1,22 +1,26 @@
 #NavBar{
     display: flex;
     background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 #NavHead{}
 
-#Option{
+#NavBar .nav-option:first-of-type{
     margin-left: auto;
 }
 
-button{
+#NavBar button{
     background-color: transparent;
     color: #69dbfa;
     font-family: 'Courier New', monospace;
-    border-radius: 5PX;
+    border-radius: 5px;
     margin: 10px;
-    border-color: transparent;    
-    &:hover{
-        background-color: #05363c;
-        background-: 50% ;
-    } 
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#NavBar button:hover{
+    background-color: #05363c;
 }

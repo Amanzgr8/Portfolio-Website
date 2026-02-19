@@ -1,34 +1,12 @@
 import React from "react";
 import "./WelBar.css";
-import MyPic from '/Users/amanuels/Desktop/personal-website/src/pics/homepage.png'
-import TypeWriter from "../TypeWriter";
-import ScrollText from "../scrolltext";
+import TypewriterGlitchText from "../TypewriterGlitchText";
 
 function WelcomeBar(){
     return(
-        <div id="WelBar">
-            <div id="WelOne">
-                <b id="WelText"> <TypeWriter typingSpeed = {100} text={"Welcome"}/> </b>
-            </div>
-            <div id="WelTwo">
-                <div id="WelNote">
-                   <b> <ScrollText text = {'Intro'} speed={20} scrollLength = {300}/></b>
-
-                    <ScrollText 
-                        speed={20} 
-                        scrollLength={300} 
-                        text={`
-                            Welcome. My name is Amanuel Kebede Fissiha.
-                            I am a student who is growing with the purpose of becoming someone very useful to society.
-                            This online website aims to showcase my professional and personal journey in life.
-                            Throughout the website, I'll be sharing some details of my journey, my achievements, and my challenges.
-                            I hope it is insightful into the type of person I am, and trying to be.
-                            `}
-                    /> 
-                        
-                    
-                </div>
-                <div>< img id="pic" src={MyPic} alt="A pic of Me" /> </div>
+        <div id="welcome-section" className="section" >
+            <div id="WelOne" className="welcome-only">
+                <TypewriterGlitchText as="h1" id="WelText" text="Welcome" typingSpeed={100} hoverOnly baseOnly intensity="high" />
             </div>
         </div>
     )

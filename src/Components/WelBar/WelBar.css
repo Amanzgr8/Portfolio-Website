@@ -1,33 +1,74 @@
-#WelBar{
+.section{
     display: block;
     margin: 15px;
 }
 #WelOne{
     background-color: transparent;
     min-height: 15vw;
-    margin-bottom: 25vw;
+    margin-bottom: 8vw;
+}
+
+.welcome-only {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
 }
 
 #WelText{
     font-size: 15vw;
-}@keyframes cursor{
-    50%{border-color: transparent;}
+    margin: 0;
 }
+
+.sub-header {
+    margin: 0 0 1rem;
+}
+
 #WelTwo{
     display: flex;
     margin: 10vw;
+    gap: 2rem;
+    align-items: center;
     
 }
 #WelNote{
     display: block;
-    max-width: 30%;
-    min-width: 30%;
+    max-width: 40%;
+    min-width: 40%;
     justify-content: center;
     align-items: center;
 }
+
+.about-copy {
+    line-height: 1.8;
+    text-align: left;
+    color: #c9f2ff;
+}
 #pic{
     height: auto;
-    width: 70%;
+    width: 100%;
+    max-width: 420px;
     opacity: 80%;
     align-self: center;
+}
+
+#picWrap{
+    flex: 1;
+}
+
+@media (max-width: 900px) {
+    #WelTwo {
+        flex-direction: column;
+        margin: 6vw;
+    }
+
+    #WelNote {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    #WelText {
+        font-size: 20vw;
+    }
 }

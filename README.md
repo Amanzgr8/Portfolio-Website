@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Welcome. This is a repository for  a personal portfolio webiste. The purpose of this website is to show case 3 main things: who i am as a person, some of the projects i did in my journey to becoming a computer programmer and some of my HONOR Pogram achievments here at Minnesota State University Mankato. Keep in mind that this project is still in progress and at it's early ages. 
+Welcome. This is a repository for a personal portfolio website. The purpose of this website is to showcase who I am as a person and some of the projects I did in my journey to becoming a computer programmer. Keep in mind that this project is still in progress and in its early stages.
 
 ## Prerequisites
 
